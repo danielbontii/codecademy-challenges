@@ -18,3 +18,18 @@ function wordReverser(phrase) {
 }
 
 console.log(wordReverser("Codecademy rules"));
+
+//SOLUTION 2
+function wordReverser(phrase) {
+  const phraseArr = phrase.split(" ");
+  const reversedPhraseArr = phraseArr.reverse();
+  const reversedPhrase = reversedPhraseArr.join(" ");
+  return reversedPhrase;
+}
+
+//OR YOU COULD JUST DO SOLUTION 2 ALL IN ONE LINE😉
+function wordReverser(phrase) {
+  return phrase.split(" ").reverse().join(" ");
+}
+
+console.log(wordReverser("Codecademy rules"));
