@@ -3,6 +3,7 @@
 
 // For example, scoreSorter([1, 2, 3, 9999, 13], 10000) should return [9999, 13, 3, 2, 1].
 
+//SOLUTION 1
 function swap(arr, index1, index2) {
   let temp = arr[index1];
   arr[index1] = arr[index2];
@@ -21,6 +22,21 @@ function scoreSorter(array, topScore) {
     }
   }
   return toSort;
+}
+
+console.log(scoreSorter([1, 2, 3, 9999, 13], 10000));
+
+//SOLUTION 2
+function scoreSorter(array, topScore) {
+  const sorted = [];
+  while (array.length !== 0) {
+    const max = Math.max(...array);
+    sorted.push(max);
+
+    const toRemove = array.findIndex((element) => element === max);
+    array.splice(toRemove, 1);
+  }
+  return sorted;
 }
 
 console.log(scoreSorter([1, 2, 3, 9999, 13], 10000));
