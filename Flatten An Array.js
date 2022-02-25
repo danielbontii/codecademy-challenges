@@ -19,3 +19,18 @@ function flattenArray(array) {
 }
 
 console.log(flattenArray([1, 2, [3, 4, 5], 6, [7, 8], 9]));
+
+function flattenArray(array) {
+  // Write your code here
+  let flattenedArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] instanceof Array) {
+      for (let j = 0; j < array[i].length; j++) {
+        flattenedArray.push(array[i][j]);
+      }
+    } else {
+      flattenedArray.push(array[i]);
+    }
+  }
+  return flattenedArray;
+}

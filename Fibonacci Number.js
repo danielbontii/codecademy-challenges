@@ -15,4 +15,15 @@ function fibFinder(n) {
   return position;
 }
 
+function fibFinder(n) {
+  // Write your code here
+  if (n === 0) {
+    return 0;
+  } else if (n === 1) {
+    return 1;
+  } else {
+    return fibFinder(n - 1) + fibFinder(n - 2);
+  }
+}
+
 console.log(fibFinder(6));
